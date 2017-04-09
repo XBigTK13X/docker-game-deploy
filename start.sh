@@ -5,6 +5,10 @@ set -e
 CONYAY="/root/conyay"
 WORKSPACE="/root/source"
 
+if [ ! -z $CI_PROJECT_DIR ]; then
+    WORKSPACE=${CI_PROJECT_DIR}
+fi
+
 if [ -z $TITLE_PRETTY ]; then
     echo "TITLE_PRETTY env required"
     exit 1

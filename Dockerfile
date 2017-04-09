@@ -21,6 +21,6 @@ RUN chmod +x start.sh
 
 VOLUME [ "/root/source" ]
 
-ENTRYPOINT ["/bin/bash","-c"]
+ENTRYPOINT []
 
-CMD ["/root/start.sh"]
+CMD ["/bin/bash", "-c", "/root/start.sh"]
